@@ -1,5 +1,4 @@
 #!/bin/sh
-# Perform API calls and store results
 logo='
    ▄█▀▀▀▀▀█▄▄
 ▄█▀░░▄░▄░░░░▀█▄
@@ -13,7 +12,6 @@ block_height=$(curl -sSL "https://mempool.space/api/blocks/tip/height")
 block_tip_hash=$(curl -sSL "https://mempool.space/api/blocks/tip/hash")
 diff_adjustment=$(curl -sSL "https://mempool.space/api/v1/difficulty-adjustment" | jq -r '.difficultyChange')
 
-# Print BTC Information
 echo "$logo"
 echo "BTC PRICE: $btc_price"
 echo "BLOCK HEIGHT: $block_height"
